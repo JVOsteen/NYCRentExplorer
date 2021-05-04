@@ -1,5 +1,4 @@
 <!-- PROJECT LOGO -->
-<br />
 <p align="center">
   <h3 align="center">New York City Rent Explorer</h3>
   <p align="center">
