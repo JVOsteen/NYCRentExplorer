@@ -1,0 +1,14 @@
+name: nycrentexplorer
+title: nycrentexplorer
+username:
+account: joshua-vera-osteen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4066363
+bundleId: 4553803
+url: https://joshua-vera-osteen.shinyapps.io/nycrentexplorer/
+when: 1620105978.27833
+lastSyncTime: 1620105978.27835
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .RData|gifs/tab1-example-video.gif|gifs/tab2-example-1.gif|gifs/tab2-example-2.gif|gifs/tab3-example-1.gif|gifs/tab3-example-2.gif|images/logo.png|images/screenshot.png|images/spreadsheet-example.png|images/tab1-example-video.mp4|LICENSE.txt|project-plan/project-plan.pdf|project-plan/project-plan.Rmd|README.html|README.md|Vignette/vignette.html|Vignette/Vignette.Rmd

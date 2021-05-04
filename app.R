@@ -1,5 +1,5 @@
 
-# Authors: Yashar Mansouri, Joshua O'Steen, Christopher Hoffman
+# Authors: Joshua Vera O'Steen, Yashar Mansouri, Christopher Hoffman
 
 library(shiny)
 library(tidyverse)
@@ -12,9 +12,9 @@ library(dygraphs)
 library(shinycssloaders)
 
 # getting data
-df <- read_rds("../data/all_data.rds")
-df_longer <- read_rds("../data/all_data_longer.rds")
-nyc_neighborhoods <- readOGR("../data/ny.geojson", layer = "ny")
+df <- read_rds("./data/all_data.rds")
+df_longer <- read_rds("./data/all_data_longer.rds")
+nyc_neighborhoods <- readOGR("./data/ny.geojson", layer = "ny")
 #reused values
 apartment_types <- c("Studio", 
                      "One Bedroom" = "One_Bedroom",
@@ -28,9 +28,9 @@ boroughs <- c("Manhattan", "Brooklyn", "Queens", "Bronx")
 ui <- fluidPage(theme = shinytheme("cosmo"),
                 tags$head(
                   tags$style(HTML("
-                  @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@1,500&family=Nunito&display=swap');
-                  * {
-                      font-family: 'Nunito', sans-serif;
+                    @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+                   {
+                      font-family: 'PT Sans Narrow', sans-serif;
                     }
                     .shiny-output-error-black {
                       color: black;
@@ -39,10 +39,11 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                       align-items: center;
                     }
                     h1 {
-                      font-family: 'Bitter', serif;
+                      font-family: 'PT Sans Narrow', sans-serif;
                     }
-                    .modebar-container {
-                      display: none !important;
+                    p {
+                      font-family: 'Cabin', sans-serif;
+                      font-family: 'PT Sans', sans-serif;
                     }
                   "), HTML(
                     "#sidebar {
@@ -56,7 +57,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                            tabPanel("Map and Time Series Analysis",
                            ###ROW 1#############################################
                            sidebarLayout(
-                                sidebarPanel(#3,
+                                sidebarPanel(
                                   id="sidebar",
                                   selectInput("boro", "Select a borough:", 
                                               choices = boroughs, 
@@ -121,7 +122,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                                        selectInput("type_compare2", 
                                                    "Select another apartment type to compare:", 
                                                    choices = apartment_types, 
-                                                   selected = "Studio"),
+                                                   selected = "Studio")
                                        ),
                                 column(9,
                                        hr(),
@@ -156,8 +157,7 @@ ui <- fluidPage(theme = shinytheme("cosmo"),
                               
                               fluidRow(
                                 column(3,
-                                       hr(),
-                                       
+                                       br(),
                                        sliderInput(
                                          "years_to_forecast",
                                           label = "Years to forecast",
@@ -416,7 +416,7 @@ server <- function(input, output, session) {
   # compare a borough with a neighborhood, compare two neighborhoods. 
   # It also prevents output where there are less than ten data points for either histogram. 
   # Any ideas on how to shorten this code are welcome.
-  
+
   output$histogram <- renderPlotly({
     if(length(input$neighborhood_compare)==0 | length(input$neighborhood_compare2)==0){
       return(NULL)
