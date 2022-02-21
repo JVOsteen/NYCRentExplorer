@@ -53,7 +53,7 @@ The boundary data for NYC to create the leaflet map come from [data.beta.nyc](ht
 
 ### Use Case
 
-The purpose of this app is to help parties interested in New York City rent data. For example, you may be a renter in New York City wondering if you're paying a fair amount of rent to your landlord. This app could help you compare what you're being charged now to the usual tenant in your area. Also, you can see what your rent should likely in the next 1, 5, or more years. 
+The purpose of this app is to help parties interested in New York City rent data. For example, you may be a renter in New York City wondering if you're paying a fair amount of rent to your landlord. This app could help you compare what you're being charged now to the usual tenant in your area. Also, you can see what your rent should likely be in the next 1, 5, or more years. 
 
 Alternatively, if you are a prospective landlord attempting to break into the rental market and figure out what you should be charging for rent in your area, you can get a general idea by using this application and can explore median rents in other area. 
 
