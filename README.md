@@ -67,7 +67,7 @@ This data used in the app only includes median rents from each neighborhood for 
 
 The data used also excludes Staten Island completely, and does not include some neighborhoods from the other boroughs. For example, one neighborhood of importance that is not present in the data is Hell's Kitchen (also known as Clinton). 
 
-While this applucation may be a good starting place to explore, compare, and predict rents in New York City neighborhoods, it should not serve as the only resource for these things. 
+While this application may be a good starting place to explore, compare, and predict rents in New York City neighborhoods, it should not serve as the only resource for market research. 
 
 <!-- CONTRIBUTING -->
 ## Contributing
